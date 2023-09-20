@@ -1,10 +1,7 @@
-function calcul(DC1,DC2,Ds,result) {
+function calcul(DC1) {
    DC1 = Number(document.getElementById("number1").value);
-   DC2 = Number(document.getElementById("number2").value);
-    Ds = Number(document.getElementById("number3").value);
-
-   result = DC1 + DC2 + Ds;
-  document.getElementById("resultat").value= result;
+   carre = DC1 ;
+  document.getElementById("resultat").value= `le carre est:`;
 
 }
 let btn = document.querySelector("#send");
