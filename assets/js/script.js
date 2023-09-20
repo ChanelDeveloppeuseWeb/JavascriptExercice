@@ -1,20 +1,3 @@
-// function calculNombreJour(month){
-// if (month == 4, 6, 9, 11 ){
-
-// document.querySelector("#valider").value ="le nombre de jour est de 30 jours"
-
-// }else if(month ==  1, 3, 5, 7, 8, 10 , 12){
-
-// document.querySelector("#valider").value ="le nombre de jour est de 31 jours"
-
-// }
-// else{
-// document.querySelector("#valider").value ="le nombre de jour est de 28 jours"
-
-// }
-// }
-// let btn = document.querySelector("#submit")
-// btn.addEventListener("click",calculNombreJour)
 
 function calculNombreJour(Nj,month,annee){
     month = Number(document.getElementById("mois").value)
