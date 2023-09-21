@@ -1,10 +1,10 @@
-function nonAlbrege() {
+function valeurNonAlbrege() {
    quantites = Number(document.getElementById("number1").value);
    unit = Number(document.getElementById("number2").value);
-   result = DC1 + DC2 + Ds;
+   result = DC1;
   document.getElementById("resultat").value= result;
 
 }
 let btn = document.querySelector("#send");
-btn.addEventListener("click", calcul);
+btn.addEventListener("click",valeurNonAlbrege );
 
