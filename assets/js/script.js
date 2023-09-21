@@ -1,8 +1,7 @@
-function calculNombreJour(Nj) { 
-  let = month;
-  let= annee
-  month = Number(document.getElementById("mois").value);
-  annee = Number(document.getElementById("annee").value);
+function calculNombreJour() { 
+  
+ let month = Number(document.getElementById("mois").value);
+  let annee = Number(document.getElementById("annee").value);
   switch (month) {
     case 1:
     case 3:
@@ -29,4 +28,4 @@ function calculNombreJour(Nj) {
   document.querySelector("#valider").value = "le nombre de jour est " + Nj;
 }
 let btn = document.querySelector("#submit");
-btn.addEventListener("click", calculNombreJour(Nj));
+btn.addEventListener("click", calculNombreJour);
