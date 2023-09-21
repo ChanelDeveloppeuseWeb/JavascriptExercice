@@ -1,14 +1,15 @@
 
-function tableMultiplication(nombre) {
-
-  let i;
-  for (i = 0; i <= 9 ; i++) {
+function tableMultiplication() {
+  let nombre = Number(document.getElementById("number1").value)
+  let i; 
+  document.querySelector("#text").innerHTML = ""
+  for ( i = 1; i <= 10 ; i++) {
     resultat = nombre * i;
+    // console.log(resultat)
+    document.querySelector("#text").innerHTML += `${nombre} * ${i} = ${resultat} <br/>`
   }
-    nombre = Number(document.getElementById("number1").value)
-    document.querySelector("#result").value = `${nombre} * ${i} = ${resultat}`
+    //document.write(resultat)
 }
 
 let btn = document.querySelector("#submit")
-btn.addEventListener("click",tableMultiplication)
-console.log(tableMultiplication())
+btn.addEventListener('click', tableMultiplication)
