@@ -1,12 +1,25 @@
-function calcul(DC1,DC2,Ds,result) {
-   DC1 = Number(document.getElementById("number1").value);
-   DC2 = Number(document.getElementById("number2").value);
-    Ds = Number(document.getElementById("number3").value);
+function nombreAbregee() {
+  let quantity = document.getElementById("number1").value;
+  let unit;
+  switch (unit) {
+    case "K":
+      result = quantity * 1024;
+      break;
+    case "M":
+      result = quantity * 1024 * 1024;
+      break;
+    case "G":
+      result = quantity * 1024 * 1024 * 1024;
+      break;
+    case "T":
+      result = quantity * 1024 * 1024 * 1024 * 1024;
+      break;
 
-   result = DC1 + DC2 + Ds;
-  document.getElementById("resultat").value= result;
-
+    default:
+      result = `${quantity}K`.trimEnd();
+      break;
+  }
+  document.querySelector("#resultat").value = result;
 }
-let btn = document.querySelector("#send");
-btn.addEventListener("click", calcul);
-
+let btn = document.getElementById("send");
+btn.addEventListener("click", nombreAbregee);
