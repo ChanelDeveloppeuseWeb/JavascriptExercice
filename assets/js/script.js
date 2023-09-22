@@ -1,23 +1,36 @@
 function nombreAbregee() {
-  let quantity = Number(document.getElementById("number1").value);
-  let unit = "k";"M";"G";"T";
-  //  let  result = 0;
-  switch (unit.toUpperCase()) {
-    case ("K"):
-      result = quantity * 1024;
+  let quantity = document.getElementById("number1").value;
+  let  result = "";
+  let index = 0
+  switch (true) {
+
+    case quantity.toLowerCase().includes("k"):
+      index = quantity.indexOf("k")
+      result = quantity.slice(index)
+      console.log(result)
+      result = result + " * 1024";
       break;
-    case ("M"):
-      result = quantity * 1024 * 1024;
+    case quantity.toLowerCase().includes("m"):
+      index = quantity.indexOf("m")
+      result = quantity.slice(index)
+      console.log(result)
+      result = result + " * 1024 * 1024";
       break;
-    case ("G"):
-      result = quantity * 1024 * 1024 * 1024;
+    case quantity.toLowerCase().includes("g"):
+      index = quantity.indexOf("g")
+      result = quantity.slice(index)
+      console.log(result)
+      result = result  + " * 1024 * 1024 * 1024";
       break;
-    case ("T"):
-      result = quantity * 1024 * 1024 * 1024 * 1024;
+    case quantity.toLowerCase().includes("t"):
+       index = quantity.indexOf("t")
+      result = quantity.slice(index)
+      console.log(result)
+      result = result + "* 1024 * 1024 * 1024 * 1024";
       break;
 
     default:
-      result = `${quantity}k`.trimEnd();
+      result = `${quantity} `.trimEnd() + "K, M, G, T";
       break;
       
   }
