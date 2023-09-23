@@ -1,20 +1,22 @@
 function numberOrString() {
-  'use strict';  
-  let value = 2;
+  let value = 7;
   let result 
+
   value = document.getElementById("number1").value;
 
-  if (typeof value === "number")
+  if (typeof(value) === 'number')
  {
-    result = "la valeur est un nombre";
+  result = "la valeur est un nombre";
   } 
-  else if (typeof value === "string") 
-  {
 
+  else if (typeof(value) === 'string') 
+  {
     result = "la valeur est une chaine de caractere";
   }
 
   document.getElementById("resultat").value = result;
 }
-let btn = document.querySelector("#send");
-btn.addEventListener("click", numberOrString());
+
+// let btn = document.querySelector("#send");
+// btn.addEventListener("click", numberOrString());
+
