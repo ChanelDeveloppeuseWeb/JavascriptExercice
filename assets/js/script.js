@@ -1,12 +1,20 @@
-function calcul(DC1,DC2,Ds,result) {
-   DC1 = Number(document.getElementById("number1").value);
-   DC2 = Number(document.getElementById("number2").value);
-    Ds = Number(document.getElementById("number3").value);
+function numberOrString() {
+  'use strict';  
+  let value = 2;
+  let result 
+  value = document.getElementById("number1").value;
 
-   result = DC1 + DC2 + Ds;
-  document.getElementById("resultat").value= result;
+  if (typeof value === "number")
+ {
+    result = "la valeur est un nombre";
+  } 
+  else if (typeof value === "string") 
+  {
 
+    result = "la valeur est une chaine de caractere";
+  }
+
+  document.getElementById("resultat").value = result;
 }
 let btn = document.querySelector("#send");
-btn.addEventListener("click", calcul);
-
+btn.addEventListener("click", numberOrString());
